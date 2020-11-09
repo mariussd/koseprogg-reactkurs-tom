@@ -2,8 +2,23 @@
 Laget med CodeSandbox
 
 ## Komponenter
-React er bygget opp av komponenter som snakker sammen. En komponent er en del av et hierarki, og kan sende informasjon opp og ned i hierarkiet. Informasjon kan sendes nedover ved hjelp av **props** og oppover ved hjelp av **callbacks**. 
+React er bygget opp av komponenter som snakker sammen. En komponent er en del av et hierarki, og kan sende informasjon opp og ned i hierarkiet. Slik kan en komponent se ut:
 
+```
+const App = () => {
+  return (
+    <div>
+      <h1>Hei, koseprogg!</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Informasjonsflyten mellom komponenter er noe av det som gjør React *genialt*, men å forstå hvordan det fungerer kan være en liten kneik å komme over. Vi prøver vårt beste på å forklare det. 
+
+Informasjon kan sendes nedover ved hjelp av **props** og oppover ved hjelp av **callbacks**. 
 Et eksempel på hvordan man sender ned et prop kan være:\
 \
 `<Button title={"Legg til post"} onClick={handleButtonPress} />` \
@@ -36,6 +51,8 @@ const colorChanged = (color) => {
 
 **Merk at vi ikke skriver `onColorChange={colorChanged(color)}`!** Når man sender en funksjon nedover som et prop sender man *pekeren* til funksjonen, og da trenger man ikke definere hvilke argumenter funksjonen tar inn. Derimot er man nødt til å kalle funksjonen med de riktige argumentene når man bruker den *i datterkomponenten*.
 
+For å bruke et prop i en datterkomponent må vi sende inn props som et argument når vi lager komponenten, og kalle propet. O eksempelet over ville vi i datterkomponenten skrevet `props.onColorChange('red');`
+
 Det første vi skal gjøre er å lage en Header-komponent, og sende ned en tittel. 
 
 ### Oppgave 1: Header-komponenten
@@ -46,3 +63,35 @@ import React from "react";
 ```
 
 i toppen av fila. Gjør dette før du lager komponenten.
+
+I dette kurset skal vi lage funksjonelle komponenter, de kan deklareres på denne måten:
+
+```
+const Header = (props) => {
+    return ();
+};
+
+export default Header;
+```
+
+`export default Header` betyr at Header-komponenten er det som blir importert av andre JavaScript-filer som importerer Header.js-fila. 
+
+
+**Oppgave 1a: Bruk det du kan av HTML-syntaks, og få Header til å returnere en `<div>` med en `<h1>` inni**
+<details>
+  <summary>Hint</summary>
+  
+  ```
+  const Header = (props) => {
+    return (
+        <div>
+            ...
+        </div>
+    );
+  };
+  ```
+</details>
+
+**Oppgave 1b: Få `<h1>` til å ta inn en tekst fra props.
+    
+#### Oppgave 2: 
