@@ -87,6 +87,7 @@ For å bruke et prop i en datterkomponent må vi sende inn props som et argument
 Det første vi skal gjøre er å lage en Header-komponent, og sende ned en tittel. 
 
 ### Oppgave 1: Header-komponenten
+I samme mappe som komponenten `App`, lag en ny fil som heter `Header.js`.
 Når vi lager en React-komponent er vi nødt til å importere React inn i JavaScript-fimen. Dette gjør man ved å skrive
 
 ```
