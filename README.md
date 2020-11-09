@@ -1,2 +1,2 @@
-# koseprogg-reactkurs-tom
+# koseprogg-reactkurs
 Created with CodeSandbox
