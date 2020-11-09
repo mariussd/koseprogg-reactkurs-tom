@@ -78,7 +78,9 @@ const App = () => {
 export default App;
 ```
 
-**Merk at vi ikke skriver `onColorChange={colorChanged(color)}`!** Når man sender en funksjon nedover som et prop sender man *pekeren* til funksjonen, og da trenger man ikke definere hvilke argumenter funksjonen tar inn. Derimot er man nødt til å kalle funksjonen med de riktige argumentene når man bruker den *i datterkomponenten*.
+**Merk at vi ikke skriver `onColorChange={colorChanged(color)}`!** 
+
+Når man sender en funksjon nedover som et prop sender man *pekeren* til funksjonen, og da trenger man ikke definere hvilke argumenter funksjonen tar inn. Derimot er man nødt til å kalle funksjonen med de riktige argumentene når man bruker den *i datterkomponenten*.
 
 For å bruke et prop i en datterkomponent må vi sende inn props som et argument når vi lager komponenten, og kalle propet. O eksempelet over ville vi i datterkomponenten skrevet `props.onColorChange('red');`
 
