@@ -23,7 +23,7 @@ Et eksempel på hvordan man sender ned et prop kan være:\
 \
 `<Button title={"Legg til post"} onClick={handleButtonPress} />` \
 \
-Man deklarerer komponenten på samme måte som i HTML, og man legger til props i React på samme måte som man legger til attributter i HTML. I kodesnutten over er altså `title` og `onClick` det vi kaller for props.
+I kodesnutten over er altså `title` og `onClick` det vi kaller for props. Man deklarerer komponenten på samme måte som i HTML, og man legger til props i React på samme måte som man legger til attributter i HTML. 
 
 I et prop kan man også sende ned **funksjoner**. Dette er det vi kaller for **callbacks**. Om man sender en funksjon ned som et prop, gir man datter-komponenten mulighet til å kjøre denne funksjonen *i moderkomponenten*. 
 
@@ -47,6 +47,35 @@ const colorChanged = (color) => {
 };
 
 <ColorPicker onColorChange={colorChanged} />
+```
+
+Komponenten `App` vi definerte tidligere kan nå se slik ut:
+
+```
+const App = () => {
+
+  const handleButtonPress = () => {
+      if (verify(username) && verify(password)) {
+        loginUser(username, password);
+      } else {
+        alert('Username or password is incorrect!);
+      }
+  };
+
+  const colorChanged = (color) => {
+      setColor(color);
+  };
+
+  return (
+    <div>
+      <h1>Hei, koseprogg!</h1>
+      <ColorPicker onColorChange={colorChanged} />
+      <Button title={"Legg til post"} onClick={handleButtonPress} />
+    </div>
+  );
+}
+
+export default App;
 ```
 
 **Merk at vi ikke skriver `onColorChange={colorChanged(color)}`!** Når man sender en funksjon nedover som et prop sender man *pekeren* til funksjonen, og da trenger man ikke definere hvilke argumenter funksjonen tar inn. Derimot er man nødt til å kalle funksjonen med de riktige argumentene når man bruker den *i datterkomponenten*.
