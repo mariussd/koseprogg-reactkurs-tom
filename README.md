@@ -136,6 +136,6 @@ export default Header;
   ```
 </details>
 
-**Oppgave 1b: Få `<h1>` til å ta inn en tekst fra props.
+**Oppgave 1b: Få `<h1>` til å ta inn en tekst fra props.**
     
-#### Oppgave 2: 
+## Denne readme-en er ikke ferdig, kom tilbake senere :))
