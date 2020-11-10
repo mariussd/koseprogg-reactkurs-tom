@@ -1,6 +1,18 @@
 # React-kurs for Koseprogg
 Laget med CodeSandbox
 
+## Intro
+
+React er et bibliotek til JavaScript. Syntaksen minner om en blanding av JavaScript og HTML, som man kan se i kodesnuttene lenger ned. Noe av det kuleste med React er at det lar deg lage *single page applications*. Om man kun bruker vanlig JavaScript, HTML og CSS må man ofte ha flere forskjellige filer for å vise de forskjellige delene av nettsiden. For eksempel `index.html`, `profile.html`, `user.html` og så videre.
+
+Dette er ikke nødvendigvis et problem, men det legger ikke til rette for at de forskjellige undersidene snakker sammen. Man laster én side om gangen, og den siden har kun informasjon om seg selv. React, derimot, legger til rette for at de forskjellige undersidene vet hva som skjer på de andre sidene, og lar deg bruke den informasjonen til å *oppdatere alle sider fortløpende*. Om man har vanlige statiske filer må man lage kompliserte funksjoner for å oppdatere alle andre deler av siden når det skjer en endring. Om man skriver React riktig gjør den alt det for deg, helt magisk. 
+
+Når en endring skjer i programmet eller DOM-en, vil React finne ut hvor mye den trenger å re-rendre på grunn av endringen. Deretter endrer den *kun den delen av siden der endringen gjør noe forskjell*. Se bildet under: 
+
+<img src="https://i.stack.imgur.com/I9sFR.gif" />
+
+Her ser man at kun HTML-elementet med klokkeslettet re-rendres, ikke hele siden. Dette er en av grunnene til at React fungerer såpass bra som det gjør. 
+
 ## Komponenter
 React er bygget opp av komponenter som snakker sammen. En komponent er en del av et hierarki, og kan sende informasjon opp og ned i hierarkiet. Slik kan en komponent se ut:
 
