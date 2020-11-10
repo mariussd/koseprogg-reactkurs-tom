@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "./Header";
-import Post from "./Post";
-import PostInput from "./PostInput";
 import "./styles.css";
 
 export default function App() {
